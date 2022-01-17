@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codegym</title>
+</head>
+<body>
+<input type="text" id="SL">
+<select name="" id="a1">
+  <option value="x1">USD</option>
+  <option value="x2">VND</option>
+</select>
+<select name="" id="a2">
+  <option value="x1">USD</option>
+  <option value="x2">VND</option>
+</select>
+<button onclick="add1()">Convert</button><br>
+Result:<p id="123"></p>
+<script>
+  function add1() {
+    let a = document.getElementById("SL").value;
+    let a1 = document.getElementById("a1").value;
+    let a2 = document.getElementById("a2").value;
+    if (a1 == a2) {
+      document.getElementById("123").innerHTML = a + '';
+    }
+    if (a1 == "x1" && a2 == "x2") {
+      let d = a*23000;
+      document.getElementById("123").innerHTML = d + '';
+    }
+    if (a1 == "x2" && a2 == "x1") {
+      let p = a/23000;
+      document.getElementById("123").innerHTML = p + '';
+    }
+  }
+</script>
+</body>
+</html>
