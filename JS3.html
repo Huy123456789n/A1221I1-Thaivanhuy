@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<label>Cân Nặng</label>
+<input id="cannang" type="number">
+<label>Chiều Cao</label>
+<input id="chieucao" type="number">
+<button onclick="tinhbody()" id="CV">Convert</button>
+<script>
+  function tinhbody() {
+    let a = document.getElementById("cannang").value;
+    let b = document.getElementById("chieucao").value;
+    let c = a / b
+    console.log(c)
+      if (c<18.5) {
+        alert("Underweghit");
+    } else if(c<25.0) {
+        alert("Normal");
+      } else if(c<30.0) {
+        alert("Overweghit");
+      }else  {
+        alert("Obese");
+      }
+
+  }
+</script>
+</body>
+</html>
