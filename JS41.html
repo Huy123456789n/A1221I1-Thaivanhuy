@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<label>Nhập Tháng</label>
+<input id="thang" type="number">
+<button onclick="ngay()" id="nut">Tính Số Ngày</button>
+<script>
+  function ngay() {
+    let data = document.getElementById("thang").value;
+    switch (data) {
+      case '1':
+      case '3':
+      case '5':
+      case '7':
+      case '8':
+      case '11':
+        alert('Tháng có 31 Ngày');
+        break;
+      case '2':
+        alert('Tháng có 28 hoặc 29 Ngày');
+      case '4':
+      case '6':
+      case '9':
+      case '12':
+        alert('Tháng có 30 Ngày');
+        break;
+        default:
+          alert('Mời Nhập Số')
+    }
+  }
+</script>
+</body>
+</html>
