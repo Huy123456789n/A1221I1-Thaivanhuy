@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" id="tukhoa2"/>
+<button name="bt" type="button" onclick="tudien()">Chuyển Đổi</button>
+<script>
+  function tudien() {
+    let a =["hello","what","how"];
+    let b =["Xin Chào","Cái Gì","Thế Nào"]
+    let c = "";
+    let text=false
+    let z= document.getElementById("tukhoa2").value;
+    for (i=0;i < a.length;i++) {
+      if (z==a[i]){
+        c = b[i];
+        text = true;
+        console.log(c)
+      }
+    }if (!text) {
+      alert("Không tìm thấy")
+    } alert(c)
+  }
+</script>
+</body>
+</html>
