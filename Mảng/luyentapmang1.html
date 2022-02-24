@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="bai_1()">Bài 1</button>
+<button type="button" onclick="bai_2()">Bài 2</button>
+<script>
+    function bai_1(){
+        let a= [1,7,9,12,14,15,4,8,9,26]
+        for (i=0;i<a.length;i++) {
+            if (a[i] > 10) {
+                alert(a[i])
+            }
+        }
+    }
+    function bai_2() {
+        let b= [1,7,9,12,14,15,4,8,9,26]
+        let max= b[0]
+        let index = 0
+        for (i=0;i<b.length;i++) {
+            if (b[i]>max) {
+               max= b[i]
+                index = i;
+                alert(max + 'vị trí' + i);
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

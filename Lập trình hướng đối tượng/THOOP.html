@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="1368px" height="768px" style="border: 1px sandybrown;"></canvas>
+<script>
+    // [Thực hành] Xây dựng lớp Date
+    let Date = function (day,month,year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay= function (day){
+            return this.day ;
+        }
+        this.getMonth= function (month) {
+            return this.month;
+        }
+        this.Year=function (year) {
+            return this.year;
+        }
+        this.setDay=function (day) {
+            this.day = day;
+        }
+        this.setMonth=function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+    };
+
+    let date = new Date (1,1,1999);
+    let day = date.getDay();
+    let month = date.getMonth()
+    let year = date.Year()
+    console.log(day + "/" + month + "/" + year)
+    date.setDay(10);
+    date.setMonth(10);
+    date.setYear(2000);
+    console.log(day + "/" + month + "/" + year);
+    // Bài TH Xây dựng lớp Hình Tròn
+    class Circle {
+        constructor(radius) {
+            this.radius = radius
+            this.arena = Math.PI * radius * radius
+        }
+        getradius(){
+            return this.radius;
+        }
+        getarena() {
+            return this.arena
+        }
+    }
+    let circle = new Circle(2);
+    let radius = circle.getradius();
+    let arena = circle.getarena();
+    console.log(radius + "and" + arena);
+    // TH Vẽ Hình tròn
+    class CriclE {
+        constructor(x,y,radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+    }
+        let ctx = document.getElementById("mycanvas").getContext("2d")
+        let cricle = new CriclE(500,500,80);
+        ctx.beginPath();
+        ctx.arc(cricle.x,cricle.y,cricle.radius,0,2*Math.PI);
+        ctx.fill();
+
+</script>
+</body>
+</html>

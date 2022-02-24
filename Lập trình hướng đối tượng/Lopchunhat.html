@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="580" height="230" style="border: 1px red"  ></canvas>
+<script>
+    class Rectangle {
+        constructor(width,height) {
+            this.width=width;
+            this.height=height;
+            this.dientich= width*height;
+            this.chuvi= (width+height)/2;
+        }
+        getwidth(){
+            return this.width;
+        }
+        getheight(){
+            return this.height;
+        }
+        getdientich(){
+            return this.dientich;
+        }
+        getchuvi(){
+            return this.chuvi;
+        }
+    }
+        let rectagle = new Rectangle(20,10);
+        let width = rectagle.getwidth()
+        let height = rectagle.getheight()
+        let dientich = rectagle.getdientich()
+        let chuvi =rectagle.getchuvi()
+        console.log(width,height,dientich,chuvi);
+        let cv = document.getElementById("canvas").getContext("2d");
+        cv.beginPath()
+        cv.rect(rectagle.width,rectagle.height,200,100);
+        cv.fill()
+        console.log(rectagle)
+    document.write("Diện Tích là" +  dientich )
+    document.write("<br>")
+    document.write("Chu Vi là" +  chuvi)
+
+
+</script>
+</body>
+</html>
