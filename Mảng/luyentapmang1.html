@@ -7,6 +7,12 @@
 <body>
 <button type="button" onclick="bai_1()">Bài 1</button>
 <button type="button" onclick="bai_2()">Bài 2</button>
+<button type="button" onclick="bai_3()">Bài 3</button>
+<button type="button" onclick="bai_4()">Bài 4</button>
+<button type="button" onclick="bai_5()">Bài 5</button>
+<button type="button" onclick="bai_6()">Bài 6</button>
+<button type="button" onclick="bai_7()">Bài 7</button>
+<button type="button" onclick="bai_8()">Bài 8</button>
 <script>
     function bai_1(){
         let a= [1,7,9,12,14,15,4,8,9,26]
@@ -17,17 +23,108 @@
         }
     }
     function bai_2() {
-        let b= [1,7,9,12,14,15,4,8,9,26]
-        let max= b[0]
-        let index = 0
-        for (i=0;i<b.length;i++) {
-            if (b[i]>max) {
-               max= b[i]
+        let b = [1, 7, 9, 12, 14, 15, 4, 8, 9, 26];
+        let max = b[0];
+        let index = 0;
+        for (let i = 1; i < b.length; i++) {
+            if (b[i] > max) {
+                max = b[i];
                 index = i;
-                alert(max + 'vị trí' + i);
             }
         }
+        alert(max + 'vị trí' + index);
 
+    }
+    function bai_3() {
+        let b = [1, 7, 9, 12, 14, 15, 4, 8, 9, 26];
+        let max = b[0];
+        let index = 0;
+        let sum=0
+        for (let i = 0; i < b.length; i++) {
+            if (b[i] > max) {
+                max = b[i];
+                index = i;
+            }
+            sum=b[i] + sum
+            console.log(sum)
+        }
+        alert(max + 'vị trí' + index);
+        let tb = sum/(b.length);
+        console.log(tb)
+    }
+    function bai_4() {
+        let array = new Array()
+        let p = prompt('Nhập độ dài mảng');
+        for (let i =0;i<p;i++) {
+            array[i] = prompt('nhập số thứ'+(i+1)+'=');
+            document.write('số thứ' + (i+1) + '='+array[i] + '<br/>')
+        }
+    }
+    function bai_5() {
+        let array = new Array()
+        let p = prompt('Nhập dồ dài mảng');
+        let count = 0
+        for (let i =0;i<p;i++) {
+            array[i] = prompt("nhập mamg");
+            document.write('số thứ' + (i+1)+ '=' + array[i]+'<br/>')
+            if(array[i]<0) {
+                count++
+            }
+        } document.write('có' + count + 'số nguyên âm');
+    }
+    function bai_6() {
+        let array = [2,4,6,8,10,12,14,16,18,20];
+        let V = prompt("nhập số Nguyên");
+        let check = false;
+        for (let i =0;i<array.length;i++) {
+            if (Number(V) === array[i]) {
+                check = true;
+            }
+        }
+            if (check===true){
+                document.write('V có trong array');
+            } else {
+                document.write("V ko có trong array");
+            }
+    }
+    function bai_7() {
+        let array = [2,4,6,8,10,12,14,16,18,20];
+        let p= prompt("Nhập số nguyên");
+        let check = false
+        for (let i=0;i<array.length;i++) {
+            if (Number(p) === array[i]) {
+                check = true;
+            }
+        }
+        if (check === true) {
+            let ar = array.filter(function (a) {
+                if (a === Number(p)) {
+                    return false;
+                }
+                return true;
+            });
+            ar.push('0');
+            document.write('mảng sau khi bị xóa' + p + 'ra khỏi mảng ='+ar.join());
+        }
+    }
+    function bai_8() {
+        let array = [];
+        let n = Number(prompt('Nhập độ dài của mảng = '));
+        for (let i = 0; i < n; i++){
+            array[i] = Number(prompt('Nhấp số thứ ' + (i+1) + ' = '));
+        }
+
+        document.write('Mảng ban đầu = ' + array.join() + '<br/>');
+        for (let j = 0;j < array.length - 1;j++){
+            for (let k = j+1; k < array.length;k++){
+                if(array[k] > array[j]){
+                    let temp = array[k];
+                    array[k] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        document.write('Mảng sau khi sắp xếp = ' + array.join());
     }
 </script>
 </body>
