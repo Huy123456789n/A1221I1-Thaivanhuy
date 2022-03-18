@@ -1,12 +1,18 @@
+package com.codegym;
+
 import java.util.Scanner;
 
 public class Main {
-    public static void main(int[] args) {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Number");
         int number = input.nextInt();
+        int previous = input.nextInt();
 
         switch (number) {
+            case 0:
+                System.out.println("Zero");
+                break;
             case 1:
                 System.out.println("one");
                 break;
@@ -34,6 +40,15 @@ public class Main {
             case 9:
                 System.out.println("night");
                 break;
+            default:
+                System.out.println("Out of ability");
+                switch (previous) {
+                    case 0:
+                        System.out.println(previous);
+                    case 1:
+                        System.out.println();
+
+                }
         }
     }
 }
