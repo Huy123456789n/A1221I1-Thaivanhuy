@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Abstract_Class/Abstract_Class.iml" filepath="$PROJECT_DIR$/Abstract_Class/Abstract_Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Access modifier,static method/Access modifier,static method.iml" filepath="$PROJECT_DIR$/Access modifier,static method/Access modifier,static method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/BMI Calculator/BMI Calculator.iml" filepath="$PROJECT_DIR$/Introduction to Java/BMI Calculator/BMI Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Loop/BT_TH_Loop/BT_TH_Loop.iml" filepath="$PROJECT_DIR$/Loop/BT_TH_Loop/BT_TH_Loop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/Date of Month/Date of Month.iml" filepath="$PROJECT_DIR$/Introduction to Java/Date of Month/Date of Month.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/Equation/Equation.iml" filepath="$PROJECT_DIR$/Introduction to Java/Equation/Equation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/Exercises Ung dung chuyen doi so thanh chu/Exercises Ung dung chuyen doi so thanh chu.iml" filepath="$PROJECT_DIR$/Introduction to Java/Exercises Ung dung chuyen doi so thanh chu/Exercises Ung dung chuyen doi so thanh chu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/Exercises Ung dung chuyen doi tien te/Exercises Ung dung chuyen doi tien te.iml" filepath="$PROJECT_DIR$/Introduction to Java/Exercises Ung dung chuyen doi tien te/Exercises Ung dung chuyen doi tien te.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Kethua2/Kethua2.iml" filepath="$PROJECT_DIR$/Kethua2/Kethua2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Loop/Lai ngan hang/Lai ngan hang.iml" filepath="$PROJECT_DIR$/Loop/Lai ngan hang/Lai ngan hang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/Leap Year Calculator/Leap Year Calculator.iml" filepath="$PROJECT_DIR$/Introduction to Java/Leap Year Calculator/Leap Year Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/OOP.iml" filepath="$PROJECT_DIR$/OOP/OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/Operator/Operator.iml" filepath="$PROJECT_DIR$/Introduction to Java/Operator/Operator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Loop/Prime Number/Prime Number.iml" filepath="$PROJECT_DIR$/Loop/Prime Number/Prime Number.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/SystemTime/SystemTime.iml" filepath="$PROJECT_DIR$/Introduction to Java/SystemTime/SystemTime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/Variable Data Type/Variable Data Type.iml" filepath="$PROJECT_DIR$/Introduction to Java/Variable Data Type/Variable Data Type.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Introduction to Java/[Exercises] Hiển Thị lời chào/[Exercises] Hiển Thị lời chào.iml" filepath="$PROJECT_DIR$/Introduction to Java/[Exercises] Hiển Thị lời chào/[Exercises] Hiển Thị lời chào.iml" />
+      <module fileurl="file://$PROJECT_DIR$/class and Object/class and Object.iml" filepath="$PROJECT_DIR$/class and Object/class and Object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/module2.iml" filepath="$PROJECT_DIR$/.idea/module2.iml" />
+    </modules>
+  </component>
+</project>
