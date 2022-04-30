@@ -1,0 +1,9 @@
+Mã Nhân Viên :NV121211
+Tên Nhân Viên :Thái Văn Huy
+Ngày Sinh : 01/10/1999
+Giới Tính : Nam
+CMND : 187808466
+SDT :765932858
+Trình Độ Học Vấn:Đại Học
+Vị trí Nhân Viên:QUản Lý
+Lương:1.0E7

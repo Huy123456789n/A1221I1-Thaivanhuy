@@ -1,0 +1,8 @@
+
+Mã Khách Hàng :KH121212
+Tên Khách Hàng :Thái Văn Huy
+Ngày Sinh : 01/10/1999
+Giới Tính : nam
+CMND : 187808466
+SDT :765932858
+Loại Khách Hàng:V.I.P
