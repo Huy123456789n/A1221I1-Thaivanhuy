@@ -5,11 +5,16 @@ import Com.CodeGym.VehicleManagement.Controller.ControllerCar;
 import java.util.Scanner;
 
 public class Main {
+    static AddnewVehicleView addnewVehicleView = new AddnewVehicleView();
+   static DisplayVehicleView displayVehicleView = new DisplayVehicleView();
+   static DeleteVehicleView deleteVehicleView = new DeleteVehicleView();
+    static ControllerCar controllerCar = new ControllerCar();
+
     public static void main(String[] args) {
-        AddnewVehicleView addnewVehicleView = new AddnewVehicleView();
-        DisplayVehicleView displayVehicleView = new DisplayVehicleView();
-        ControllerCar controllerCar = new ControllerCar();
-        Scanner scanner = new Scanner(System.in);
+        DisPlayMenu();
+    }
+    public static void DisPlayMenu() {
+         Scanner scanner = new Scanner(System.in);
         while (true) {
             int choice =0;
             System.out.println("Chương Trình Quản Lý Phương Tiện Giao Thông");
@@ -27,6 +32,7 @@ public class Main {
                     displayVehicleView.DisplayVehicle();
                     break;
                 case 3:
+                    deleteVehicleView.Delete();
                     break;
                 case 4:
                     break;

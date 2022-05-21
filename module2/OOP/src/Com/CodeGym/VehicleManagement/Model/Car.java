@@ -1,16 +1,16 @@
 package Com.CodeGym.VehicleManagement.Model;
 
-public class Car extends Vehicle{
+import java.io.Serializable;
+
+public class Car extends Vehicle implements Serializable {
     private int SoChongoi;
     private String KieuXe;
 
     public Car(String bienkiemsoat, String hangsanxuat, int namSanXuat, String chusohuu, int soChongoi, String kieuXe) {
         super(bienkiemsoat, hangsanxuat, namSanXuat, chusohuu);
-        SoChongoi = soChongoi;
-        KieuXe = kieuXe;
+        this.SoChongoi = soChongoi;
+        this.KieuXe = kieuXe;
     }
-
-
     public int getSoChongoi() {
         return SoChongoi;
     }
@@ -29,5 +29,15 @@ public class Car extends Vehicle{
 
     public Car(String bienkiemsoat, String hangsanxuat, int namSanXuat, String chusohuu) {
         super(bienkiemsoat, hangsanxuat, namSanXuat, chusohuu);
+    }
+
+    @Override
+    public String toString() {
+        return getBienkiemsoat() + ","
+                + getHangsanxuat()+ ","
+                +getNamSanXuat()+ ","
+               + getChusohuu()+ ","
+                + getSoChongoi()+ ","
+                + getKieuXe();
     }
 }

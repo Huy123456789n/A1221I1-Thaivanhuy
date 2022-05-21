@@ -1,15 +1,20 @@
 package Com.CodeGym.VehicleManagement.Controller;
 
 import Com.CodeGym.VehicleManagement.Model.Car;
-import Com.CodeGym.VehicleManagement.Repository.CarRepository;
 import Com.CodeGym.VehicleManagement.Service.CarService;
 
+import java.util.List;
+
 public class ControllerCar {
-    CarRepository carRepository = new CarRepository();
-    public void AddNewCar(Car car) {
-        carRepository.AddCar(car);
+    CarService carService = new CarService.CarServiceIlm();
+    public void delete(String bienkiemsoat) {
+        carService.delete(bienkiemsoat);
     }
-    public void DisplayCar() {
-        carRepository.Display();
+    public void AddCar(Car car) {
+        carService.AddCar(car);
     }
+    public void Display() {
+        carService.Display();
+    }
+
 }

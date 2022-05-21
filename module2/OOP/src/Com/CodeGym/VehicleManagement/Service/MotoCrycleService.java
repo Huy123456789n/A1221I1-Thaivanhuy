@@ -1,4 +1,4 @@
 package Com.CodeGym.VehicleManagement.Service;
 
-public interface MotoCrycleService {
+public interface MotoCrycleService extends VehicleService{
 }

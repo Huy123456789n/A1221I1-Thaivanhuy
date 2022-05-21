@@ -10,7 +10,7 @@ public abstract class Vehicle {
         this.bienkiemsoat = bienkiemsoat;
         this.hangsanxuat = hangsanxuat;
         this.namSanXuat = namSanXuat;
-        Chusohuu = chusohuu;
+        this.Chusohuu = chusohuu;
     }
 
     public String getBienkiemsoat() {
@@ -43,5 +43,13 @@ public abstract class Vehicle {
 
     public void setChusohuu(String chusohuu) {
         Chusohuu = chusohuu;
+    }
+
+    @Override
+    public String toString() {
+        return " Biển Kiểm soát :" + bienkiemsoat
+                +" hãng Sản Xuất :" + hangsanxuat
+                + " năm Sản Xuất :" + namSanXuat
+                + " Chủ sở Hữu :" + Chusohuu;
     }
 }

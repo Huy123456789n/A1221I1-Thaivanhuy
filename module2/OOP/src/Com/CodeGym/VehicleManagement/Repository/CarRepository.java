@@ -1,43 +1,37 @@
 package Com.CodeGym.VehicleManagement.Repository;
 
 import Com.CodeGym.VehicleManagement.Model.Car;
-import Com.CodeGym.VehicleManagement.Service.CarService;
-import Com.CodeGym.VehicleManagement.View.AddnewVehicleView;
+import Com.CodeGym.VehicleManagement.Utils.CarFile;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
-public class CarRepository implements CarService {
-    ArrayList<Car> arrayListcar = new ArrayList<>();
+public interface CarRepository {
+    public void Delete(String bienkiemsoat);
 
-    @Override
-    public void AddCar(Car car) {
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream("OOP/src/Com/CodeGym/VehicleManagement/Data/Car.csv");
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(car);
-            objectOutputStream.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+    public void Display();
+
+    public void AddCar(Car car);
+
+    static CarFile carfile = new CarFile();
+
+    public class CarRepo implements CarRepository {
+        static List<Car> cars = new ArrayList<>();
+
+        @Override
+        public void Delete(String bienkiemsoat) {
+            carfile.delete(bienkiemsoat);
         }
+        @Override
+        public void Display() {
 
-    }
-    @Override
-    public void Display() {
+            carfile.Display();
 
-    }
-    @Override
-    public void Delete() {
-        File file = new File("OOP/src/Com/CodeGym/VehicleManagement/Data/Car.csv");
-    }
-    public String getInformation(Car car) {
-        return "Số biển Kiểm Soát: " + car.getBienkiemsoat() + "\n"
-                + "Hãng Sản Xuất: " + car.getHangsanxuat() + "\n"
-                + "Năm Sản Xuất: " + car.getNamSanXuat()+ "\n"
-                + "Chủ Sở Hữu: " + car.getChusohuu()+ "\n"
-                + "Số Chỗ Ngồi: " + car.getSoChongoi()+ "\n"
-                + "Kiểu Xe: " + car.getKieuXe();
+        }
+        @Override
+        public void AddCar(Car car) {
+            carfile.AddCar(car);
+        }
     }
 }

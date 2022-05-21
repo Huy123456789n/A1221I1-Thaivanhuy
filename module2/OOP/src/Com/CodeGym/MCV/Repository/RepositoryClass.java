@@ -6,7 +6,6 @@ public class RepositoryClass implements Repo{
     Student[] students = new Student[20];
     int size = 0;
 
-
     @Override
     public void saveStudent(Student student) {
         students[size] = student;
@@ -23,10 +22,7 @@ public class RepositoryClass implements Repo{
                 }
             }
         }
-
-
     }
-
     @Override
     public void disPlayAll() {
         for (int i =0;i< size;i++){
@@ -34,4 +30,5 @@ public class RepositoryClass implements Repo{
                     + " Điểm : "+ students[i].getPoint()
                     + " Ngày Sinh :" + students[i].getDateOfBirth());
     }
-}}
+    }
+}

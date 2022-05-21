@@ -1,7 +1,6 @@
 package Com.CodeGym.VehicleManagement.View;
 
 import Com.CodeGym.VehicleManagement.Controller.ControllerCar;
-import Com.CodeGym.VehicleManagement.Repository.CarRepository;
 
 import java.util.Scanner;
 
@@ -20,7 +19,7 @@ public class DisplayVehicleView {
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
-                    controllerCar.DisplayCar();
+                    controllerCar.Display();
                     break;
             }
         }
