@@ -36,3 +36,9 @@ where ma_loai_dich_vu = 2;
 insert into dich_vu
 value(1,'Villa',100,1000000,4,1,1,'STD','không có',50,3),
 	(2,'House',300,4000000,10,2,1,'STD','không có',100,2);
+insert into dich_vu_di_kem
+value (1,'CF',200000,'VND','new'),
+(2,'MT',100000,'VND','new');
+insert into hop_dong_chi_tiet
+value(1,1,1,2),
+(2,2,2,3);    
