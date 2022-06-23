@@ -1,12 +1,12 @@
-codeGym/repository/UserRepositoryImpl.java
- codeGym.repository.UserRepositoryImpl
+codeGym/service/UserServiceImpl.java
+ codeGym.service.UserServiceImpl
 codeGym/model/User.java
  codeGym.model.User
 codeGym/service/IUserService.java
  codeGym.service.IUserService
 codeGym/repository/IUserRepository.java
  codeGym.repository.IUserRepository
-codeGym/service/UserServiceImpl.java
- codeGym.service.UserServiceImpl
+codeGym/repository/UserRepositoryImpl.java
+ codeGym.repository.UserRepositoryImpl
 codeGym/controller/ControllerServlet.java
  codeGym.controller.ControllerServlet

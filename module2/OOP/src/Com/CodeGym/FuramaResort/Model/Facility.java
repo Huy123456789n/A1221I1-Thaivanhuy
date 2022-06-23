@@ -58,5 +58,4 @@ public abstract class Facility {
         RentalType = rentalType;
     }
 
-
 }
