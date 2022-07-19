@@ -11,4 +11,7 @@ public interface ICustomerRepository {
     Customer findById(int id) throws SQLException;
     void createCustomer(Customer customer) throws SQLException;
     void updateCustomer(Customer customer) throws SQLException;
+    List<Customer> findByName(String name) throws SQLException;
+    List<Customer> findByAddress(String address) throws SQLException;
+    List<String> typeCustomer(int id) throws SQLException;
 }

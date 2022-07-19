@@ -4,6 +4,7 @@ import codyGym.model.Customer;
 import codyGym.repository.CustomerRepositoryImpl;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerService implements ICustomerService{
@@ -30,5 +31,26 @@ public class CustomerService implements ICustomerService{
     @Override
     public void updateCustomer(Customer customer) throws SQLException {
         customerRepository.updateCustomer(customer);
+    }
+
+    @Override
+    public List<Customer> findByName(String name) throws SQLException {
+        List<Customer> customers;
+        customers= customerRepository.findByName(name);
+        return customers;
+    }
+
+    @Override
+    public List<Customer> findByAddress(String address) throws SQLException {
+        List<Customer> customers;
+        customers= customerRepository.findByAddress(address);
+        return customers;
+    }
+
+    @Override
+    public List<String> typeCustomer(int id) throws SQLException {
+        List<String> typeCustomer;
+        typeCustomer = customerRepository.typeCustomer(id);
+        return typeCustomer;
     }
 }

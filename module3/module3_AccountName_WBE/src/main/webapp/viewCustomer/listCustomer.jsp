@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ADMIN
-  Date: 6/21/2022
-  Time: 3:45 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -16,6 +10,16 @@
 </head>
 <body>
 <h2>List Customer</h2>
+<form method="get" action="/customer">
+    <label for="search">Choose How To Search:</label>
+    <select name="action" id="search">
+        <option value="searchByName">Search By Name</option>
+        <option value="searchByAddress">Search by address</option>
+        <option value="SearchByCmnd">Search By CMND</option>
+    </select>
+    <input type="text" name="name" placeholder="Search">
+    <button type="submit">Search</button>
+</form>
 <table class="table table-striped">
         <thead>
         <tr>
@@ -42,7 +46,8 @@
             <td><c:out value="${customer.getSdt()}"></c:out></td>
             <td><c:out value="${customer.getEmail()}"></c:out></td>
             <td><c:out value="${customer.getAddress()}"></c:out></td>
-            <td><c:out value="${customer.getTypeCode()}"></c:out></td>
+            <td><a href="/customer?action=typeCustomer&id=${customer.getId()}">${customer.getTypeCode()}</a></td>
+<%--            <td><c:out value="${customer.getTypeCode()}"></c:out></td>--%>
             <td><c:out value="${customer.getGender()}"></c:out></td>
             <td><button type="button" class="btn btn-warning"><a href="/customer?action=update&id=${customer.getId()}" style="text-decoration: none; color: white ">Edit</a></button></td>
             <td><button type="button" class="btn btn-danger"><a href="/customer?action=delete&id=${customer.getId()}" style="text-decoration: none; color: white" >Delete</a></button></td>

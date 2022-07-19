@@ -24,6 +24,12 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         return connection;
     }
     private static final String SQL_SELECT_CUSTOMER = "select * from customer";
+    private static final String SQL_SELECT_CUSTOMER_BY_NAME = "select * from customer where ho_ten like(?)";
+    private static final String SQL_SELECT_CUSTOMER_BY_ADDRESS = "select * from customer where dia_chi like(?)";
+//    private static final String SQL_SELECT_TYPE_CUSTOMER = "select ho_ten,type_name from " +
+//            "type_customer join customer on type_customer.type_id = customer.ma_loai_khach " +
+//            "where ma_khach_hang= (?)";
+
     @Override
     public List<Customer> findAll() throws SQLException {
         List<Customer> customers = new ArrayList<>();
@@ -98,7 +104,6 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         }
         return customer;
     }
-
     @Override
     public void createCustomer(Customer customer) throws SQLException {
         Connection connection = getConnection();
@@ -141,5 +146,79 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         if (connection != null) {
             connection.close();
         }
+    }
+
+    @Override
+    public List<Customer> findByName(String name) throws SQLException {
+        List<Customer> customers = new ArrayList<>();
+        Connection connection = getConnection();
+        PreparedStatement statement = connection.prepareStatement(SQL_SELECT_CUSTOMER_BY_NAME);
+        statement.setString(1,name);
+        ResultSet resultSet = statement.executeQuery();
+        while (resultSet.next()) {
+            int id_cus = resultSet.getInt("ma_khach_hang");
+            String name_cus = resultSet.getString("ho_ten");
+            String email = resultSet.getString("email");
+            int sdt = resultSet.getInt("so_dien_thoai");
+            String dateOfBirth = resultSet.getString("ngay_sinh");
+            int cmnd = resultSet.getInt("so_cmnd");
+            int gender = resultSet.getInt("gioi_tinh");
+            String address = resultSet.getString("dia_chi");
+            int typeCode = resultSet.getInt("ma_loai_khach");
+            customers.add(new Customer(id_cus, name_cus, email, sdt, dateOfBirth, cmnd, gender, address, typeCode));
+        }
+        if (resultSet != null) {
+            resultSet.close();
+        }
+        if (statement != null) {
+            statement.close();
+        }
+        if (connection != null) {
+            connection.close();
+        }
+        return customers;
+    }
+    @Override
+    public List<Customer> findByAddress(String address) throws SQLException {
+        List<Customer> customers = new ArrayList<>();
+        Connection connection = getConnection();
+        PreparedStatement statement = connection.prepareStatement(SQL_SELECT_CUSTOMER_BY_ADDRESS);
+        statement.setString(1,address);
+        ResultSet resultSet = statement.executeQuery();
+        while (resultSet.next()) {
+            int id_cus = resultSet.getInt("ma_khach_hang");
+            String name_cus = resultSet.getString("ho_ten");
+            String email = resultSet.getString("email");
+            int sdt = resultSet.getInt("so_dien_thoai");
+            String dateOfBirth = resultSet.getString("ngay_sinh");
+            int cmnd = resultSet.getInt("so_cmnd");
+            int gender = resultSet.getInt("gioi_tinh");
+            String address_cus = resultSet.getString("dia_chi");
+            int typeCode = resultSet.getInt("ma_loai_khach");
+            customers.add(new Customer(id_cus, name_cus, email, sdt, dateOfBirth, cmnd, gender, address_cus, typeCode));
+        }
+        if (resultSet != null) {
+            resultSet.close();
+        }
+        if (statement != null) {
+            statement.close();
+        }
+        if (connection != null) {
+            connection.close();
+        }
+        return customers;
+    }
+    @Override
+    public List<String> typeCustomer(int id) throws SQLException {
+        List<String> type_customer = new ArrayList<>();
+     Connection connection = getConnection();
+     CallableStatement statement = connection.prepareCall("call type_customer(?,?,?)");
+     statement.setInt(1,id);
+     statement.executeQuery();
+        String name = statement.getString(2);
+     String type = statement.getString(3);
+     type_customer.add(1,name);
+     type_customer.add(2,type);
+     return type_customer;
     }
 }

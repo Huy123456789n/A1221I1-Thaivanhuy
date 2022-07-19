@@ -2,8 +2,8 @@ codyGym/repository/EmployeeRepositoryImpl.java
  codyGym.repository.EmployeeRepositoryImpl
 codyGym/model/Employee.java
  codyGym.model.Employee
-codyGym/model/Customer.java
- codyGym.model.Customer
+codyGym/model/TypeCustomer.java
+ codyGym.model.TypeCustomer
 codyGym/controller/EmployeeServlet.java
  codyGym.controller.EmployeeServlet
 codyGym/repository/IEmployeeRepository.java
@@ -14,15 +14,39 @@ codyGym/controller/AdminServlet.java
  codyGym.controller.AdminServlet
 codyGym/service/EmployeeServiceImpl.java
  codyGym.service.EmployeeServiceImpl
-codyGym/model/Contract.java
- codyGym.model.Contract
-codyGym/service/ICustomerService.java
- codyGym.service.ICustomerService
-codyGym/repository/ICustomerRepository.java
- codyGym.repository.ICustomerRepository
-codyGym/controller/CustomerServlet.java
- codyGym.controller.CustomerServlet
+codyGym/repository/ServiceRepositoryImpl.java
+ codyGym.repository.ServiceRepositoryImpl
+codyGym/repository/ConnectionRepository.java
+ codyGym.repository.ConnectionRepository
 codyGym/repository/CustomerRepositoryImpl.java
  codyGym.repository.CustomerRepositoryImpl
+codyGym/model/CustomerView.java
+ codyGym.model.CustomerView
+codyGym/service/ICustomerService.java
+ codyGym.service.ICustomerService
+codyGym/controller/ServiceServlet.java
+ codyGym.controller.ServiceServlet
+codyGym/model/Customer.java
+ codyGym.model.Customer
+codyGym/repository/ICustomerRepository.java
+ codyGym.repository.ICustomerRepository
 codyGym/service/CustomerService.java
  codyGym.service.CustomerService
+codyGym/model/Service.java
+ codyGym.model.Service
+codyGym/controller/ContractServlet.java
+ codyGym.controller.ContractServlet
+codyGym/repository/IServiceRepository.java
+ codyGym.repository.IServiceRepository
+codyGym/repository/ContractRepositoryImpl.java
+ codyGym.repository.ContractRepositoryImpl
+codyGym/service/IServiceService.java
+ codyGym.service.IServiceService
+codyGym/repository/IContractRepository.java
+ codyGym.repository.IContractRepository
+codyGym/service/ServiceServiceImpl.java
+ codyGym.service.ServiceServiceImpl
+codyGym/model/Contract.java
+ codyGym.model.Contract
+codyGym/controller/CustomerServlet.java
+ codyGym.controller.CustomerServlet

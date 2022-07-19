@@ -3,17 +3,19 @@ package codyGym.controller;
 import codyGym.model.Customer;
 import codyGym.repository.CustomerRepositoryImpl;
 import codyGym.service.CustomerService;
+import codyGym.service.ICustomerService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "CustomerServlet", value = "/customer")
 public class CustomerServlet extends HttpServlet {
-    private static CustomerService customerService = new CustomerService();
+    private ICustomerService customerService = new CustomerService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String action = request.getParameter("action");
@@ -36,7 +38,28 @@ public class CustomerServlet extends HttpServlet {
                 formedit(request,response);
             } catch (SQLException e) {
                 e.printStackTrace();
+            }break;
+        case "searchByName":
+            try {
+                searchByName(request,response);
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
+            break;
+        case "searchByAddress":
+            try {
+                searchByAddress(request,response);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            break;
+        case "typeCustomer" :
+            try {
+                formType(request,response);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            break;
         default:
             try {
                 listCustomer(request,response);
@@ -45,6 +68,41 @@ public class CustomerServlet extends HttpServlet {
             }
             break;
     }
+    }
+    private void formType(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        List<String> customer = customerService.typeCustomer(id);
+        RequestDispatcher dispatcher;
+        if (customer == null) {
+            dispatcher = request.getRequestDispatcher("/error404.jsp");
+        } else {
+            request.setAttribute("customer",customer);
+            dispatcher = request.getRequestDispatcher("/viewCustomer/type.jsp");
+        } dispatcher.forward(request,response);
+    }
+
+    private void searchByAddress(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+        String address = request.getParameter( "name");
+        List<Customer> customers = customerService.findByAddress( "%"+ address +"%");
+        RequestDispatcher dispatcher;
+        if (customers == null) {
+            dispatcher = request.getRequestDispatcher("/error404.jsp");
+        } else {
+            request.setAttribute("customer",customers);
+            dispatcher = request.getRequestDispatcher("/viewCustomer/search.jsp");
+        } dispatcher.forward(request,response);
+    }
+
+    private void searchByName(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+        String name = request.getParameter( "name");
+        List<Customer> customers = customerService.findByName("%"+ name +"%");
+        RequestDispatcher dispatcher;
+        if (customers == null) {
+            dispatcher = request.getRequestDispatcher("/error404.jsp");
+        } else {
+            request.setAttribute("customer",customers);
+            dispatcher = request.getRequestDispatcher("/viewCustomer/search.jsp");
+        } dispatcher.forward(request,response);
     }
 
     private void formedit(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
@@ -68,13 +126,12 @@ public class CustomerServlet extends HttpServlet {
     private void formDelete(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
     int id = Integer.parseInt(request.getParameter("id"));
     Customer customer = customerService.findById(id);
-    RequestDispatcher dispatcher;
     if (customer == null){
-        dispatcher = request.getRequestDispatcher("error404.jsp");
+        response.sendRedirect("/error404.jsp");
     }else {
         request.setAttribute("customer",customer);
-        dispatcher = request.getRequestDispatcher("/viewCustomer/delete.jsp");
-    } dispatcher.forward(request,response);
+        response.sendRedirect("/customer");
+    }
     }
     private void listCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         List<Customer> customers = customerService.findAll();
@@ -117,10 +174,10 @@ public class CustomerServlet extends HttpServlet {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
+                break;
             default:
     }
 }
-
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
@@ -134,11 +191,11 @@ public class CustomerServlet extends HttpServlet {
         Customer customer = new Customer(id,name,email,sdt,date,cmnd,gender,address,type);
         RequestDispatcher dispatcher ;
         if (customer == null){
-            dispatcher = request.getRequestDispatcher("/error404.jsp");
+             request.getRequestDispatcher("/error404.jsp").forward(request,response);
         }else {
             customerService.updateCustomer(customer);
-            dispatcher = request.getRequestDispatcher("/viewCustomer/update.jsp");
-        } dispatcher.forward(request,response);
+            response.sendRedirect("/customer");
+        }
     }
     private void createCustomer(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         String name = request.getParameter("name");
@@ -162,10 +219,10 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         try {
             customerService.deleteCustomer(id);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("viewCustomer/delete.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/customer");
             dispatcher.forward(request,response);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-    }
+}

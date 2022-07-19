@@ -10,6 +10,7 @@ public class Customer {
     private int gender;
     private String address;
     private int typeCode;
+
     public Customer( String name, String email, int sdt, String dateOfBirth, int cmnd, int gender, String address, int typeCode) {
         this.name = name;
         this.email = email;

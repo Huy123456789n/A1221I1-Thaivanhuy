@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="490f588c-c285-49f6-bbc1-0f1f1c20aeed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/baiThi_Module3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/java/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/java/repository/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/java/repository/IProductRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/java/repository/ProductRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/java/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/java/service/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baiThi_Module3/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/baithi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/java/controller/Servlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/java/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/java/repository/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/java/repository/IRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/java/repository/RepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/java/service/IService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/java/service/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/webapp/view/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/webapp/view/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../baithi/src/main/webapp/view/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/controller/ContractServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/controller/ServiceServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/model/CustomerView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/model/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/model/TypeCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/ConnectionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/ContractRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/IContractRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/IServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/ServiceRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/service/IServiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/service/ServiceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewCustomer/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewCustomer/type.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewService/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewService/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/artifacts/product_manager_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/artifacts/product_manager_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_19_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/libraries/Maven__org_webjars_bootstrap_5_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/libraries/Maven__org_webjars_bower_jquery_3_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/libraries/Maven__org_webjars_popper_js_2_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/product_manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/repository/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/repository/ProductRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/service/CategoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/java/com/example/product_manager/service/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/webapp/view/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/webapp/view/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/webapp/view/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/webapp/view/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product_manager/src/main/webapp/view/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/controller/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/model/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/model/Contract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/repository/CustomerRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/repository/CustomerRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/repository/ICustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/repository/ICustomerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/classes/java/main/codyGym/service/ICustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/libs/module3_AccountName_WBE-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/libs/module3_AccountName_WBE-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/controller/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/model/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/model/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/CustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/CustomerRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/repository/ICustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/java/codyGym/service/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewAdmin/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewAdmin/homePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewCustomer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewCustomer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewCustomer/listCustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module3_AccountName_WBE/src/main/webapp/viewCustomer/listCustomer.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2BpbhixTtR6hrxEDbjrFzudhXhR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="490f588c-c285-49f6-bbc1-0f1f1c20aeed" name="Default Changelist" comment="" />
+      <created>1657606095074</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657606095074</updated>
+      <workItem from="1657606096561" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
