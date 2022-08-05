@@ -8,4 +8,5 @@ public class Main {
         FuramaController furamaController = new FuramaController();
         furamaController.displayMainMenu();
     }
+
 }

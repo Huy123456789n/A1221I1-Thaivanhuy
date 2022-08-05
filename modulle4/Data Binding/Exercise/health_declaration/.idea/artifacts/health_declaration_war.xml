@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="health_declaration:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>health_declaration</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="health_declaration-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="health_declaration:war exploded" />
+    </root>
+  </artifact>
+</component>

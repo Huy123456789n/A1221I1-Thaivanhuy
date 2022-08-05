@@ -1,0 +1,8 @@
+com/example/controller/UserController.java
+ com.example.controller.UserController
+com/example/configuration/AppConfiguration.java
+ com.example.configuration.AppConfiguration
+com/example/model/User.java
+ com.example.model.User
+com/example/configuration/AppInitializer.java
+ com.example.configuration.AppInitializer
