@@ -5,11 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/product">List Product</a>
+<a href="/music">List Music</a>
 <th:block th:if="${message}">
-<p th:text="${message}" style="color: limegreen" ></p>
+    <p th:text="${message}" style="color: limegreen" ></p>
 </th:block>
-<form th:action="@{/create-product}" th:object="${product}" method="post">
+<form th:action="@{/create-music}" th:object="${music}" method="post">
     <table>
         <tr>
             <td>Id:</td>
@@ -21,19 +21,19 @@
         </tr>
         <tr>
             <td>Price:</td>
-            <td><input type="text" th:field="*{price}"/></td>
+            <td><input type="text" th:field="*{singer}"/></td>
         </tr>
         <tr>
             <td>Discription:</td>
-            <td><input type="text" th:field="*{description}"/></td>
+            <td><input type="text" th:field="*{type}"/></td>
         </tr>
         <tr>
             <td>Prodedures:</td>
-            <td><input type="text" th:field="*{procedures}"/></td>
+            <td><input type="text" th:field="*{link}"/></td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Create customer"></td>
+            <td><input type="submit" value="Create"></td>
         </tr>
     </table>
 </form>

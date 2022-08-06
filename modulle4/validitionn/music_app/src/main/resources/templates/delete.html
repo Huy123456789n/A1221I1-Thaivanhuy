@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Are You Sure???
+<form th:action="@{/delete-music}" th:object="${music}" method="post">
+    <input th:type="hidden" name="id" th:field="${p.id}">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Procedures</th>
+        </tr>
+        <tr>
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.singer}"></td>
+            <td th:text="${p.type}"></td>
+            <td th:text="${p.link}"></td>
+        </tr>
+        <td></td>
+        <td><input type="submit" value="Delete"></td>
+        </th:block>
+    </table>
+
+</form>
+</body>
+</html>

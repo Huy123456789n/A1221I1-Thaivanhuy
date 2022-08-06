@@ -45,7 +45,7 @@ public class ProductController {
         modelAndView.addObject("p",product.get());
         return modelAndView;
     }
-    
+
     @PostMapping("/edit-product")
     public ModelAndView edit(@ModelAttribute("product") Product product) {
         productService.save(product);
