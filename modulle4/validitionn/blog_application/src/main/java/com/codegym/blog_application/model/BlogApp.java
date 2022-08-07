@@ -1,9 +1,7 @@
 package com.codegym.blog_application.model;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.time.LocalDate;
 
 
 @Entity
@@ -11,12 +9,12 @@ public class BlogApp {
     @Id
     private int id;
     private String name;
-    private LocalDate time;
+    private String time;
 
     public BlogApp(){
     }
 
-    public BlogApp(int id, String name, LocalDate time) {
+    public BlogApp(int id, String name, String time) {
         this.id = id;
         this.name = name;
         this.time = time;
@@ -38,11 +36,11 @@ public class BlogApp {
         this.name = name;
     }
 
-    public LocalDate getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalDate time) {
+    public void setTime(String time) {
         this.time = time;
     }
 }

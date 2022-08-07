@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<a href="/music">List Music</a>
+<a href="/blog">List Music</a>
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
 <body>
 <form th:action="@{/edit-blog}" th:object="${blog}" method="post">
-    <input th:type="hidden" name="id" th:field="*{id}">
+    <input th:type="hidden" name="id" th:field="${p.id}">
     <table>
         <table>
 
             <tr>
                 <td>name:</td>
-                <td><input type="text" th:field="*{name}"/></td>
+                <td><input type="text" th:field="${p.name}"/></td>
             </tr>
             <tr>
                 <td>Price:</td>
-                <td><input type="text" th:field="*{time}"/></td>
+                <td><input type="text" th:field="${p.time}"/></td>
             </tr>
 
             <tr>
