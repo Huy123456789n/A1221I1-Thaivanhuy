@@ -5,6 +5,8 @@ import com.codegym.music_app.model.Music;
 import com.codegym.music_app.service.IMusicService;
 import com.codegym.music_app.service.MusicService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,9 +22,10 @@ public class MusicController {
     private IMusicService musicService;
 
 @GetMapping("/music")
-    public ModelAndView list(){
+    public ModelAndView list(Pageable pageable){
+    Page<Music> customers = musicService.findAll(pageable);
     ModelAndView modelAndView = new ModelAndView("/list");
-    modelAndView.addObject("music",musicService.findAll());
+    modelAndView.addObject("music",customers);
     return modelAndView;
 }
 @GetMapping("/create-music")

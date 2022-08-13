@@ -5,23 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/blog">List Music</a>
 <th:block th:if="${message}">
     <p th:text="${message}" style="color: limegreen" ></p>
 </th:block>
-<form th:action="@{/create-blog}" th:object="${blog}" method="post">
+<form th:action="@{/create-category}" th:object="${cate}" method="post">
     <table>
-        <tr>
-            <td>Id:</td>
-            <td><input type="text" th:field="*{id}"/></td>
-        </tr>
         <tr>
             <td>name:</td>
             <td><input type="text" th:field="*{name}"/></td>
-        </tr>
-        <tr>
-            <td>time:</td>
-            <td><input type="text" th:field="*{time}"/></td>
         </tr>
         <tr>
             <td></td>
@@ -29,5 +20,6 @@
         </tr>
     </table>
 </form>
+<a href="/blog">List</a>
 </body>
 </html>

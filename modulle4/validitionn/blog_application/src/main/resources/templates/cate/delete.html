@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/delete-category}" th:object="${cate}" method="post">
+    <input th:type="hidden" name="id" th:field="${cate.cate_id}">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+</tr>
+<th:block th:each="p : ${cate}">
+    <tr>
+        <td th:text="${p.cate_id}"></td>
+        <td th:text="${p.name}"></td>
+    </tr>
+    <td><input type="submit" value="Delete"></td>
+</th:block>
+</form>
+</body>
+</html>

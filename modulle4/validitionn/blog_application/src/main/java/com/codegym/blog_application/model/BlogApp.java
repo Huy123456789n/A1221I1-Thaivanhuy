@@ -1,7 +1,6 @@
 package com.codegym.blog_application.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
@@ -10,6 +9,25 @@ public class BlogApp {
     private int id;
     private String name;
     private String time;
+
+    @ManyToOne
+    @JoinColumn(name= "cate_id")
+    private Category cate;
+
+    public Category getCate() {
+        return cate;
+    }
+
+    public void setCate(Category cate) {
+        this.cate = cate;
+    }
+
+    public BlogApp(int id, String name, String time, Category cate) {
+        this.id = id;
+        this.name = name;
+        this.time = time;
+        this.cate = cate;
+    }
 
     public BlogApp(){
     }

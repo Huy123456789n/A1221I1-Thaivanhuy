@@ -3,6 +3,8 @@ package com.codegym.music_app.service;
 import com.codegym.music_app.model.Music;
 import com.codegym.music_app.repository.IRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -14,8 +16,8 @@ public class MusicService implements IMusicService{
     private IRepository irepository ;
 
     @Override
-    public Iterable<Music> findAll() {
-        return irepository.findAll();
+    public Page<Music> findAll(Pageable pageable) {
+        return irepository.findAll(pageable);
     }
 
     @Override

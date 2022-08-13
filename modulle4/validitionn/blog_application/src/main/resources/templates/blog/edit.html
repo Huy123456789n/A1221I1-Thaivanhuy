@@ -22,6 +22,11 @@
                 <td>Price:</td>
                 <td><input type="text" th:field="${p.time}"/></td>
             </tr>
+            <td>
+                <select th:field="${p.cate}">
+                    <option th:each="c : ${cate}" th:value="${c.cate_id}" th:text="${c.name}"></option>
+                </select>
+            </td>
 
             <tr>
                 <td></td>
