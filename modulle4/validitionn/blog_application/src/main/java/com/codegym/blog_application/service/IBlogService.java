@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.Optional;
 
 public interface IBlogService extends IGeneralService<BlogApp>{
-//    Page<BlogApp> findAllByFirstNameContaining(String firstname, Pageable pageable);
+    Page<BlogApp> findAllByNameContaining(String firstname, Pageable pageable);
 
 
 }

@@ -34,6 +34,11 @@ public class BlogServiceImpl implements IBlogService{
         blogRepository.deleteById(id);
     }
 
+    @Override
+    public Page<BlogApp> findAllByNameContaining(String firstname, Pageable pageable) {
+        return blogRepository.findAllByNameContaining(firstname,pageable);
+    }
+
 //    @Override
 //    public Page<BlogApp> findAllByFirstNameContaining(String firstname, Pageable pageable) {
 //        return blogRepository.findAllByFirstNameContaining(firstname, pageable);

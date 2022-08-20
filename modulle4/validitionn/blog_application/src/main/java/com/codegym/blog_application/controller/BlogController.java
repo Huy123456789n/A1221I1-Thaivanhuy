@@ -24,8 +24,13 @@ public class BlogController {
     private CategoryService categoryService;
 
     @GetMapping("/blog")
-    public ModelAndView disPlay(Pageable pageable){
-        Page<BlogApp> blogApps = blogService.findAll(pageable);
+    public ModelAndView disPlay(@RequestParam("search") Optional<String> search,Pageable pageable){
+        Page<BlogApp> blogApps ;
+        if (search.isPresent()){
+            blogApps = blogService.findAllByNameContaining(search.get(),pageable);
+        } else{
+            blogApps = blogService.findAll(pageable);
+        }
 //        Page<Category> categories = categoryService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("blog/list");
         modelAndView.addObject("blog",blogApps);
