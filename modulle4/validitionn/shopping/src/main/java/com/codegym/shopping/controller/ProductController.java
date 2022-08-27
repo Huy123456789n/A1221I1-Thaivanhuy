@@ -12,12 +12,12 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Optional;
 
 @Controller
-@SessionAttributes("CartDto")
+@SessionAttributes("cartDto")
 public class ProductController {
     @Autowired
     private IService service;
 
-    @ModelAttribute("CartDto")
+    @ModelAttribute("cartDto")
     public CartDto setUpCart(){
         return new CartDto();
     }
@@ -27,20 +27,33 @@ public class ProductController {
         ModelAndView modelAndView = new ModelAndView("/shop");
         modelAndView.addObject("products",service.findAll());
         return modelAndView;
-
     }
     @GetMapping("/add/{id}")
-    public String addToCart(@PathVariable Long id, @ModelAttribute CartDto cart, @RequestParam("action") String action) {
+    public String addToCart(@PathVariable Long id, @SessionAttribute CartDto cartDto, @RequestParam("action") String action) {
         Optional<Product> productOptional = service.findById(id);
         if (!productOptional.isPresent()) {
             return "/error.404";
         }
         if (action.equals("show")) {
-            cart.addProduct(productOptional.get());
+            cartDto.addProduct(productOptional.get());
+            return "redirect:/shopping-cart";
+        } else if(action.equals("list")){
+            cartDto.addProduct(productOptional.get());
+            return "redirect:/shop";
+        }
+        else  if (action.equals("sub")){
+            cartDto.subProduct(productOptional.get());
             return "redirect:/shopping-cart";
         }
-        cart.addProduct(productOptional.get());
-        return "redirect:/shop";
+        else {
+            cartDto.addProduct(productOptional.get());
+            return "redirect:/view/{id}";
+        }
     }
-
+    @GetMapping("/view/{id}")
+    public ModelAndView viewProduct(@PathVariable Long id){
+        ModelAndView modelAndView = new ModelAndView("/view");
+        modelAndView.addObject("products",service.findById(id).get());
+        return modelAndView;
+    }
 }

@@ -10,9 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepositoryImpl implements IProductRepository{
-    final ad(){
 
-    }
     private ConnectionDB connectionDB = new ConnectionDB();
     private static final String SQL_SELECT = "select * from product p join category c on c.category_id = p.category_id";
     private static final String SQL_DElETE = "delete from product where id = ?";

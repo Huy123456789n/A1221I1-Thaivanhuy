@@ -21,10 +21,18 @@
         <tr th:each="product: ${cart.products}">
             <td th:text="${product.getKey().name}"></td>
             <td>
-                <a id="decrease_button" th:text="${'-'}"></a>
+                <a> <img th:src="@{'/img/' + ${product.getKey().description}}" width="100px" height="100px"> </a>
+                <button th:href="@{/delete-product/__${product.getKey().id}__ }" class="btn btn-danger">X</button>
+
+            </td>
+            <td>
+                <a id="decrease_button" th:text="${'SL :'}"></a>
                 <span th:text="${product.getValue()}"></span>
                 <a id="increase_button" th:href="@{/add/__${product.getKey().id}__(action='show')}"
                    th:text="${'+'}"></a>
+                <a id="increase_button" th:href="@{/add/__${product.getKey().id}__(action='sub')}"
+                   th:text="${'-'}"></a>
+
             </td>
             <td th:text="${product.getKey().price}"></td>
         </tr>

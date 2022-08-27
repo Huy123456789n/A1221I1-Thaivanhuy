@@ -10,9 +10,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -23,8 +27,26 @@ public class BlogController {
     @Autowired
     private CategoryService categoryService;
 
+    @GetMapping("/api/blog")
+    public ResponseEntity<Iterable<BlogApp>> findAlBlogs(){
+        List<BlogApp> blogApps = blogService.findAllBlog();
+        if (blogApps.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(blogApps, HttpStatus.OK);
+    }
+
+    @GetMapping("/api/blog/{id}")
+    public ResponseEntity<BlogApp> findBlog(@PathVariable int id){
+        Optional<BlogApp> blogApps = blogService.findById(id);
+        if (!blogApps.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(blogApps.get(), HttpStatus.OK);
+    }
+
     @GetMapping("/blog")
-    public ModelAndView disPlay(@RequestParam("search") Optional<String> search,Pageable pageable){
+    public ModelAndView disPlay(@RequestParam("search")  Optional<String> search,@PageableDefault(value = 5) Pageable pageable){
         Page<BlogApp> blogApps ;
         if (search.isPresent()){
             blogApps = blogService.findAllByNameContaining(search.get(),pageable);
